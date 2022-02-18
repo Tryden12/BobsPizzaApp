@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_order_screen"
+    tools:context=".OrderActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/vie_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".58"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <ImageButton
+                android:id="@+id/minus_pepsi_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/pepsi_textview"
+                app:layout_constraintTop_toBottomOf="@+id/minus_coke_imageButton"
+                app:srcCompat="@drawable/button_remove_circle_outline_24" />
+
+            <EditText
+                android:id="@+id/pepsi_count_editTextNumber"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@+id/minus_pepsi_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/coke_count_editTextNumber" />
+
+            <ImageButton
+                android:id="@+id/minus_water_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="28dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/water_textview"
+                app:layout_constraintTop_toBottomOf="@+id/minus_pepsi_imageButton"
+                app:srcCompat="@drawable/button_remove_circle_outline_24" />
+
+            <EditText
+                android:id="@+id/water_count_editTextNumber"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@+id/minus_water_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/pepsi_count_editTextNumber" />
+
+            <ImageButton
+                android:id="@+id/add_water_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/water_count_editTextNumber"
+                app:layout_constraintTop_toBottomOf="@+id/add_pepsi_imageButton"
+                app:srcCompat="@drawable/button_add_circle_outline_24" />
+
+            <ImageButton
+                android:id="@+id/add_pepsi_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/pepsi_count_editTextNumber"
+                app:layout_constraintTop_toBottomOf="@+id/add_coke_imageButton"
+                app:srcCompat="@drawable/button_add_circle_outline_24" />
+
+            <TextView
+                android:id="@+id/make_choices_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="Make Your Choices:"
+                android:textColor="@color/charcoal"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pizza_style_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/pizza_style_option"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/make_choices_textView" />
+
+            <RadioGroup
+                android:id="@+id/pizza_style_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_style_textView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/pepperoni_radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="45dp"
+                        android:checked="true"
+                        android:text="@string/pepperoni_pizza"
+                        android:textColor="@color/charcoal"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/napolitana_radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/napolitana_pizza"
+                        android:textColor="@color/charcoal"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/frontenac_radioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="45dp"
+                        android:text="@string/frontenac_pizza"
+                        android:textColor="@color/charcoal"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/classic_cheese_radioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/classic_cheese_pizza"
+
+                        android:textColor="@color/charcoal"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <ImageButton
+                android:id="@+id/minus_pizza_count_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/number_pizzas_textview"
+                app:layout_constraintTop_toBottomOf="@+id/crust_style_radioGroup"
+                app:srcCompat="@drawable/button_remove_circle_outline_24" />
+
+            <TextView
+                android:id="@+id/number_pizzas_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/number_of_pizzas_option"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crust_style_radioGroup" />
+
+            <EditText
+                android:id="@+id/pizza_count_editTextNumber"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="22dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@+id/minus_pizza_count_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/crust_style_radioGroup" />
+
+            <ImageButton
+                android:id="@+id/add_pizza_count_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/pizza_count_editTextNumber"
+                app:layout_constraintTop_toBottomOf="@+id/crust_style_radioGroup"
+                app:srcCompat="@drawable/button_add_circle_outline_24" />
+
+            <TextView
+                android:id="@+id/crust_style_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/crust_style_option"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_style_radioGroup" />
+
+            <RadioGroup
+                android:id="@+id/crust_style_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crust_style_textView">>
+
+                <RadioButton
+                    android:id="@+id/hand_tossed_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="21dp"
+                    android:checked="true"
+                    android:text="@string/hand_tossed_crust"
+                    android:textColor="@color/charcoal"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/thin_crust_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thin_crust_option"
+                    android:textColor="@color/charcoal"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/toppings_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/toppings_option"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_count_editTextNumber" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="33dp"
+                android:text="@string/extra_cost"
+                android:textColor="@color/charcoal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/toppings_textView"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_count_editTextNumber" />
+
+            <CheckBox
+                android:id="@+id/mushroom_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/mushroom_topping"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/pepperoni_checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <CheckBox
+                android:id="@+id/cheese_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cheese_topping"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/green_pepper_checkBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pepperoni_checkBox" />
+
+            <CheckBox
+                android:id="@+id/sausage_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/sausage_topping"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/anchovy_checkBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cheese_checkBox" />
+
+            <CheckBox
+                android:id="@+id/anchovy_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/anchovy_topping"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/sausage_checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/green_pepper_checkBox" />
+
+            <CheckBox
+                android:id="@+id/green_pepper_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/green_pepper_topping"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/cheese_checkBox"
+                app:layout_constraintTop_toBottomOf="@+id/mushroom_checkBox" />
+
+
+            <CheckBox
+                android:id="@+id/pepperoni_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/pepperoni_topping"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/mushroom_checkBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/drinks_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/drinks_option"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sausage_checkBox" />
+
+            <TextView
+                android:id="@+id/coke_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/coke_option"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drinks_textView" />
+
+            <TextView
+                android:id="@+id/pepsi_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/pepsi_option"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coke_textview" />
+
+            <TextView
+                android:id="@+id/water_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/water"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pepsi_textview" />
+
+            <ImageButton
+                android:id="@+id/minus_coke_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/coke_textview"
+                app:layout_constraintTop_toBottomOf="@+id/drinks_textView"
+                app:srcCompat="@drawable/button_remove_circle_outline_24" />
+
+            <ImageButton
+                android:id="@+id/add_coke_imageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/coke_count_editTextNumber"
+                app:layout_constraintTop_toBottomOf="@+id/drinks_textView"
+                app:srcCompat="@drawable/button_add_circle_outline_24" />
+
+
+            <TextView
+                android:id="@+id/tip_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/tip_option"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/water_textview" />
+
+            <RadioGroup
+                android:id="@+id/tip_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tip_textView">
+
+                <RadioButton
+                    android:id="@+id/tip_10_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="29dp"
+                    android:checked="true"
+                    android:text="@string/tip_10"
+                    tools:layout_editor_absoluteX="169dp"
+                    tools:layout_editor_absoluteY="949dp" />
+
+                <RadioButton
+                    android:id="@+id/tip_15_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="29dp"
+                    android:text="@string/tip_15"
+                    tools:layout_editor_absoluteX="232dp"
+                    tools:layout_editor_absoluteY="949dp" />
+
+                <RadioButton
+                    android:id="@+id/tip_20_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tip_20"
+                    tools:layout_editor_absoluteX="296dp"
+                    tools:layout_editor_absoluteY="949dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/coke_count_editTextNumber"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@+id/minus_coke_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/drinks_textView" />
+
+            <RadioGroup
+                android:id="@+id/pickup_delivery_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pickup_delivery_textView">
+
+                <RadioButton
+                    android:id="@+id/pickup_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:checked="true"
+                    android:text="@string/pickup" />
+
+                <RadioButton
+                    android:id="@+id/delivery_radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/delivery" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/pickup_delivery_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/delivery_option"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tip_radioGroup" />
+
+            <TextView
+                android:id="@+id/totals_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/totals"
+                android:textColor="@color/charcoal"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pickup_delivery_radioGroup" />
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="170dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="60dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tip_totals_textView" />
+
+            <TextView
+                android:id="@+id/final_total_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="60dp"
+                android:text="$0.00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <Button
+                android:id="@+id/place_order_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/submit_order"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/final_total_textview" />
+
+            <TextView
+                android:id="@+id/pizza_total_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="@string/pizza_count_total"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totals_textView" />
+
+            <TextView
+                android:id="@+id/toppings_total_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="@string/toppings_count_total"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pizza_total_textView" />
+
+            <TextView
+                android:id="@+id/coke_total_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="@string/coke_count_total"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toppings_total_textView" />
+
+            <TextView
+                android:id="@+id/pepsi_total_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="@string/pepsi_count_total"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coke_total_textView" />
+
+            <TextView
+                android:id="@+id/water_total_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="@string/water_count_total"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pepsi_total_textView" />
+
+            <TextView
+                android:id="@+id/tax_total_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="@string/tax_total"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/water_total_textView" />
+
+            <TextView
+                android:id="@+id/pickup_no_charge_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="@string/pickup_no_charge"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tax_total_textView" />
+
+            <TextView
+                android:id="@+id/tip_totals_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="right"
+                android:text="Tip: 10%"
+                android:textAlignment="gravity"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pickup_no_charge_textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

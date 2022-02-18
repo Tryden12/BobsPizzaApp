@@ -1,0 +1,98 @@
+<resources>
+    <!-- Toolbar Names-->
+    <string name="app_name">Bob\'s Pizza</string>
+    <string name="homepage_page">Homepage</string>
+    <string name="menu_page">Menu</string>
+    <string name="order_page">Order</string>
+    <string name="preferences_page">Preferences</string>
+    
+    <!-- Preferences -->
+    <string name="preference_storage_name">app_preferences</string>
+    <string name="text_size_key">text size</string>
+    <string name="bg_key">change bg</string>
+
+    <!-- Create Account, Login, Guest Access-->
+    <string name="create_account">Create Account</string>
+    <string name="Login">Login</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="full_name">First Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <!-- Clickable TextViews -->
+    <string name="forgotPassword">Forgot Password</string>
+    <string name="guestContinue">Continue as guest</string>
+
+    <!-- Buttons -->
+    <string name="view_menu">View Menu</string>
+    <string name="order_online">Order Online</string>
+    <string name="review_order">Review Order</string>
+    <string name="submit_order">Submit Order</string>
+
+    <!-- Store Location Information -->
+    <string name="street_address">5577 West Madeup Street</string>
+    <string name="city_state">Clarksville, TN</string>
+    <string name="zip_code">37040</string>
+    <string name="phone_number">(931)-777-7777</string>
+
+    <!-- Ordering Screen Options-->
+    <string name="pizza_style_option">Pizza Style:</string>
+    <string name="delivery_option">Pickup or Delivery:</string>
+    <string name="number_of_pizzas_option">Number of Pizzas:</string>
+    <string name="crust_style_option">Crust Style:</string>
+    <string name="toppings_option">Toppings:</string>
+    <string name="extra_cost">(extra $2 per selection)</string>
+    <string name="drinks_option">Drinks:</string>
+    <string name="tip_option">Tip:</string>
+
+    <!-- Pizza, Food Details -->
+    <string name="pepperoni_pizza">Pepperoni</string>
+    <string name="napolitana_pizza">Napolitana</string>
+    <string name="frontenac_pizza">Frontenac</string>
+    <string name="classic_cheese_pizza">Classic Cheese</string>
+
+    <string name="hand_tossed_crust">Hand Tossed</string>
+    <string name="thin_crust_option">Thin Crust</string>
+
+    <string name="pepperoni_topping">Pepperoni</string>
+    <string name="cheese_topping">Cheese</string>
+    <string name="mushroom_topping">Mushroom</string>
+    <string name="green_pepper_topping">Green Pepper</string>
+    <string name="anchovy_topping">Anchovy</string>
+    <string name="sausage_topping">Sausage</string>
+
+    <string name="coke_option">Coke - 32oz</string>
+    <string name="pepsi_option">Pepsi - 32oz</string>
+    <string name="water">Water - 16oz</string>
+
+    <!-- Tip -->
+    <string name="tip_10">10%</string>
+    <string name="tip_15">15%</string>
+    <string name="tip_20">20%</string>
+
+    <!-- Delivery or Pickup Method -->
+    <string name="delivery">Delivery</string>
+    <string name="pickup">Pick-up</string>
+
+    <!-- Totals and Calculations Textviews -->
+    <string name="totals">Totals:</string>
+    <string name="final_total">Final Total:</string>
+
+    <string name="pizza_count_total">Pizza $15.00 x 0</string>
+    <string name="toppings_count_total">Topping $2.00 each x 0</string>
+    <string name="coke_count_total">Coke $1.50 x 0</string>
+    <string name="pepsi_count_total">Pepsi $1.50 x 0</string>
+    <string name="water_count_total">Water $1.50 x 0</string>
+    <string name="tax_total">Tax 10%</string>
+    <string name="pickup_no_charge">Pickup (no charge)</string>
+    <string name="delivery_charge">Delivery $3.00</string>
+    <string name="tip_amount">Tip:</string>
+
+    <!-- Submit Order Alert Dialog -->
+    <string name="order_confirmation">Order Confirmation</string>
+    <string name="your_order">Your order:</string>
+
+
+</resources>
