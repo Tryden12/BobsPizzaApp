@@ -13,5 +13,9 @@ The user can..
 
 Once an order is placed, a text file is updated for historical purposes. 
 
+# Languages
+Kotlin 93%
+Java   7%
+
 # Youtube Video:
 https://youtu.be/2B0xdQ39sT0
